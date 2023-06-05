@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UPHealth_Queries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPHealth_QueriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UPHealth_QueriesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="processInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPHealth_GetMultipleImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ref_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPHealth_GetMultipleImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UPHealth_GetMultipleImagesResult" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBase64Binary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="base64Binary" nillable="true" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UPHealth_GetMultipleImagesTemp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ref_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPHealth_GetMultipleImagesTempResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UPHealth_GetMultipleImagesTempResult" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstablishLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ref_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="patient_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emp_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Logic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstablishLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstablishLinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryExecuteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarkAllChecked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Logic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MarkAllCheckedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarkAllCheckedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferSampleToBiotech">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferSampleToBiotechResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferSampleToBiotechResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transfer_TestPerfAtUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transfer_TestPerfAtUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Transfer_TestPerfAtUnitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sample_Queries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dispatch_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Logic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sample_QueriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sample_QueriesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PushTestResult_UPHBySync">
+        <s:complexType />
+      </s:element>
+      <s:element name="PushTestResult_UPHBySyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PushTestResult_UPHBySyncResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PushTestResult_UPHBySync_Dummy">
+        <s:complexType />
+      </s:element>
+      <s:element name="PushTestResult_UPHBySync_DummyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PushTestResult_UPHBySync_DummyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrTNPTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="unit_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="patient_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Test_Id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrTNPTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryOrTNPTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfBase64Binary" nillable="true" type="tns:ArrayOfBase64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UPHealth_QueriesSoapIn">
+    <wsdl:part name="parameters" element="tns:UPHealth_Queries" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_QueriesSoapOut">
+    <wsdl:part name="parameters" element="tns:UPHealth_QueriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:UPHealth_GetMultipleImages" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:UPHealth_GetMultipleImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempSoapIn">
+    <wsdl:part name="parameters" element="tns:UPHealth_GetMultipleImagesTemp" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempSoapOut">
+    <wsdl:part name="parameters" element="tns:UPHealth_GetMultipleImagesTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:EstablishLink" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:EstablishLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryExecute" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedSoapIn">
+    <wsdl:part name="parameters" element="tns:MarkAllChecked" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedSoapOut">
+    <wsdl:part name="parameters" element="tns:MarkAllCheckedResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechSoapIn">
+    <wsdl:part name="parameters" element="tns:TransferSampleToBiotech" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechSoapOut">
+    <wsdl:part name="parameters" element="tns:TransferSampleToBiotechResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transfer_TestPerfAtUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:Transfer_TestPerfAtUnit" />
+  </wsdl:message>
+  <wsdl:message name="Transfer_TestPerfAtUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:Transfer_TestPerfAtUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesSoapIn">
+    <wsdl:part name="parameters" element="tns:Sample_Queries" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesSoapOut">
+    <wsdl:part name="parameters" element="tns:Sample_QueriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySyncSoapIn">
+    <wsdl:part name="parameters" element="tns:PushTestResult_UPHBySync" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySyncSoapOut">
+    <wsdl:part name="parameters" element="tns:PushTestResult_UPHBySyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySync_DummySoapIn">
+    <wsdl:part name="parameters" element="tns:PushTestResult_UPHBySync_Dummy" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySync_DummySoapOut">
+    <wsdl:part name="parameters" element="tns:PushTestResult_UPHBySync_DummyResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryOrTNPTest" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryOrTNPTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesHttpGetIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBase64Binary" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempHttpGetIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBase64Binary" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkHttpGetIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="patient_code" type="s:string" />
+    <wsdl:part name="emp_code" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteHttpGetIn">
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="Database" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedHttpGetIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechHttpGetIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesHttpGetIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="dispatch_no" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySyncHttpGetIn" />
+  <wsdl:message name="PushTestResult_UPHBySyncHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySync_DummyHttpGetIn" />
+  <wsdl:message name="PushTestResult_UPHBySync_DummyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestHttpGetIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="patient_code" type="s:string" />
+    <wsdl:part name="Test_Id" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="remark" type="s:string" />
+    <wsdl:part name="logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesHttpPostIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBase64Binary" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempHttpPostIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPHealth_GetMultipleImagesTempHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBase64Binary" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkHttpPostIn">
+    <wsdl:part name="ref_no" type="s:string" />
+    <wsdl:part name="patient_code" type="s:string" />
+    <wsdl:part name="emp_code" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EstablishLinkHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteHttpPostIn">
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="Database" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExecuteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedHttpPostIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MarkAllCheckedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechHttpPostIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TransferSampleToBiotechHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesHttpPostIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="dispatch_no" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="Logic" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Sample_QueriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySyncHttpPostIn" />
+  <wsdl:message name="PushTestResult_UPHBySyncHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PushTestResult_UPHBySync_DummyHttpPostIn" />
+  <wsdl:message name="PushTestResult_UPHBySync_DummyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestHttpPostIn">
+    <wsdl:part name="unit_id" type="s:string" />
+    <wsdl:part name="patient_code" type="s:string" />
+    <wsdl:part name="Test_Id" type="s:string" />
+    <wsdl:part name="login_id" type="s:string" />
+    <wsdl:part name="prm_1" type="s:string" />
+    <wsdl:part name="prm_2" type="s:string" />
+    <wsdl:part name="remark" type="s:string" />
+    <wsdl:part name="logic" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrTNPTestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="UPHealthServicesSoap">
+    <wsdl:operation name="UPHealth_Queries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health Queries</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_QueriesSoapIn" />
+      <wsdl:output message="tns:UPHealth_QueriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesSoapIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images Temp</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesTempSoapIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesTempSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Establish Link</wsdl:documentation>
+      <wsdl:input message="tns:EstablishLinkSoapIn" />
+      <wsdl:output message="tns:EstablishLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Execute</wsdl:documentation>
+      <wsdl:input message="tns:QueryExecuteSoapIn" />
+      <wsdl:output message="tns:QueryExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mark All Checked</wsdl:documentation>
+      <wsdl:input message="tns:MarkAllCheckedSoapIn" />
+      <wsdl:output message="tns:MarkAllCheckedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer Sample To Biotech</wsdl:documentation>
+      <wsdl:input message="tns:TransferSampleToBiotechSoapIn" />
+      <wsdl:output message="tns:TransferSampleToBiotechSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transfer_TestPerfAtUnit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer CS Test Perform At Unit</wsdl:documentation>
+      <wsdl:input message="tns:Transfer_TestPerfAtUnitSoapIn" />
+      <wsdl:output message="tns:Transfer_TestPerfAtUnitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sample Queries</wsdl:documentation>
+      <wsdl:input message="tns:Sample_QueriesSoapIn" />
+      <wsdl:output message="tns:Sample_QueriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySyncSoapIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySync_DummySoapIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySync_DummySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">download file Info</wsdl:documentation>
+      <wsdl:input message="tns:DownloadFileSoapIn" />
+      <wsdl:output message="tns:DownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Or TNP Test</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrTNPTestSoapIn" />
+      <wsdl:output message="tns:QueryOrTNPTestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UPHealthServicesHttpGet">
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesHttpGetIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images Temp</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesTempHttpGetIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesTempHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Establish Link</wsdl:documentation>
+      <wsdl:input message="tns:EstablishLinkHttpGetIn" />
+      <wsdl:output message="tns:EstablishLinkHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Execute</wsdl:documentation>
+      <wsdl:input message="tns:QueryExecuteHttpGetIn" />
+      <wsdl:output message="tns:QueryExecuteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mark All Checked</wsdl:documentation>
+      <wsdl:input message="tns:MarkAllCheckedHttpGetIn" />
+      <wsdl:output message="tns:MarkAllCheckedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer Sample To Biotech</wsdl:documentation>
+      <wsdl:input message="tns:TransferSampleToBiotechHttpGetIn" />
+      <wsdl:output message="tns:TransferSampleToBiotechHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sample Queries</wsdl:documentation>
+      <wsdl:input message="tns:Sample_QueriesHttpGetIn" />
+      <wsdl:output message="tns:Sample_QueriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySyncHttpGetIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySyncHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySync_DummyHttpGetIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySync_DummyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">download file Info</wsdl:documentation>
+      <wsdl:input message="tns:DownloadFileHttpGetIn" />
+      <wsdl:output message="tns:DownloadFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Or TNP Test</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrTNPTestHttpGetIn" />
+      <wsdl:output message="tns:QueryOrTNPTestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UPHealthServicesHttpPost">
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesHttpPostIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">UP Health GetMultiple Images Temp</wsdl:documentation>
+      <wsdl:input message="tns:UPHealth_GetMultipleImagesTempHttpPostIn" />
+      <wsdl:output message="tns:UPHealth_GetMultipleImagesTempHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Establish Link</wsdl:documentation>
+      <wsdl:input message="tns:EstablishLinkHttpPostIn" />
+      <wsdl:output message="tns:EstablishLinkHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Execute</wsdl:documentation>
+      <wsdl:input message="tns:QueryExecuteHttpPostIn" />
+      <wsdl:output message="tns:QueryExecuteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mark All Checked</wsdl:documentation>
+      <wsdl:input message="tns:MarkAllCheckedHttpPostIn" />
+      <wsdl:output message="tns:MarkAllCheckedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer Sample To Biotech</wsdl:documentation>
+      <wsdl:input message="tns:TransferSampleToBiotechHttpPostIn" />
+      <wsdl:output message="tns:TransferSampleToBiotechHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sample Queries</wsdl:documentation>
+      <wsdl:input message="tns:Sample_QueriesHttpPostIn" />
+      <wsdl:output message="tns:Sample_QueriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySyncHttpPostIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySyncHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Test Result UPH By Sync</wsdl:documentation>
+      <wsdl:input message="tns:PushTestResult_UPHBySync_DummyHttpPostIn" />
+      <wsdl:output message="tns:PushTestResult_UPHBySync_DummyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">download file Info</wsdl:documentation>
+      <wsdl:input message="tns:DownloadFileHttpPostIn" />
+      <wsdl:output message="tns:DownloadFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query Or TNP Test</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrTNPTestHttpPostIn" />
+      <wsdl:output message="tns:QueryOrTNPTestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UPHealthServicesSoap" type="tns:UPHealthServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UPHealth_Queries">
+      <soap:operation soapAction="http://tempuri.org/UPHealth_Queries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <soap:operation soapAction="http://tempuri.org/UPHealth_GetMultipleImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <soap:operation soapAction="http://tempuri.org/UPHealth_GetMultipleImagesTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <soap:operation soapAction="http://tempuri.org/EstablishLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <soap:operation soapAction="http://tempuri.org/QueryExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <soap:operation soapAction="http://tempuri.org/MarkAllChecked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <soap:operation soapAction="http://tempuri.org/TransferSampleToBiotech" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transfer_TestPerfAtUnit">
+      <soap:operation soapAction="http://tempuri.org/Transfer_TestPerfAtUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <soap:operation soapAction="http://tempuri.org/Sample_Queries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <soap:operation soapAction="http://tempuri.org/PushTestResult_UPHBySync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <soap:operation soapAction="http://tempuri.org/PushTestResult_UPHBySync_Dummy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <soap:operation soapAction="http://tempuri.org/QueryOrTNPTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UPHealthServicesSoap12" type="tns:UPHealthServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UPHealth_Queries">
+      <soap12:operation soapAction="http://tempuri.org/UPHealth_Queries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <soap12:operation soapAction="http://tempuri.org/UPHealth_GetMultipleImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <soap12:operation soapAction="http://tempuri.org/UPHealth_GetMultipleImagesTemp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <soap12:operation soapAction="http://tempuri.org/EstablishLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <soap12:operation soapAction="http://tempuri.org/QueryExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <soap12:operation soapAction="http://tempuri.org/MarkAllChecked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <soap12:operation soapAction="http://tempuri.org/TransferSampleToBiotech" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transfer_TestPerfAtUnit">
+      <soap12:operation soapAction="http://tempuri.org/Transfer_TestPerfAtUnit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <soap12:operation soapAction="http://tempuri.org/Sample_Queries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <soap12:operation soapAction="http://tempuri.org/PushTestResult_UPHBySync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <soap12:operation soapAction="http://tempuri.org/PushTestResult_UPHBySync_Dummy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://tempuri.org/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <soap12:operation soapAction="http://tempuri.org/QueryOrTNPTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UPHealthServicesHttpGet" type="tns:UPHealthServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <http:operation location="/UPHealth_GetMultipleImages" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <http:operation location="/UPHealth_GetMultipleImagesTemp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <http:operation location="/EstablishLink" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <http:operation location="/QueryExecute" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <http:operation location="/MarkAllChecked" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <http:operation location="/TransferSampleToBiotech" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <http:operation location="/Sample_Queries" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <http:operation location="/PushTestResult_UPHBySync" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <http:operation location="/PushTestResult_UPHBySync_Dummy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <http:operation location="/DownloadFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <http:operation location="/QueryOrTNPTest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UPHealthServicesHttpPost" type="tns:UPHealthServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="UPHealth_GetMultipleImages">
+      <http:operation location="/UPHealth_GetMultipleImages" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPHealth_GetMultipleImagesTemp">
+      <http:operation location="/UPHealth_GetMultipleImagesTemp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstablishLink">
+      <http:operation location="/EstablishLink" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExecute">
+      <http:operation location="/QueryExecute" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkAllChecked">
+      <http:operation location="/MarkAllChecked" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferSampleToBiotech">
+      <http:operation location="/TransferSampleToBiotech" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sample_Queries">
+      <http:operation location="/Sample_Queries" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync">
+      <http:operation location="/PushTestResult_UPHBySync" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushTestResult_UPHBySync_Dummy">
+      <http:operation location="/PushTestResult_UPHBySync_Dummy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <http:operation location="/DownloadFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrTNPTest">
+      <http:operation location="/QueryOrTNPTest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UPHealthServices">
+    <wsdl:port name="UPHealthServicesSoap" binding="tns:UPHealthServicesSoap">
+      <soap:address location="http://localhost/expro/UPHealthServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UPHealthServicesSoap12" binding="tns:UPHealthServicesSoap12">
+      <soap12:address location="http://localhost/expro/UPHealthServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UPHealthServicesHttpGet" binding="tns:UPHealthServicesHttpGet">
+      <http:address location="http://localhost/expro/UPHealthServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UPHealthServicesHttpPost" binding="tns:UPHealthServicesHttpPost">
+      <http:address location="http://localhost/expro/UPHealthServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

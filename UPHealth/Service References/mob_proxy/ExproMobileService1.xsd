@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobile_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterMemberResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiagnosticRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiagnosticRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DiagnosticRequestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HospitalRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HospitalRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HospitalRequestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PharmacyRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PharmacyRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PharmacyRequestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNHM_Image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ref_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doc_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="login_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveNHM_ImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveNHM_ImageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="member_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobile_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProfilePic" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditProfileResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnoticRequestHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnoticRequestHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiagnoticRequestHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPharmacyRequestHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPharmacyRequestHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPharmacyRequestHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalRequestHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalRequestHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalRequestHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgotPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgotPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ForgotPasswordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="member_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduledReferralList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduledReferralListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetScheduledReferralListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaleByLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaleByLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSaleByLoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLatLong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emp_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="d_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLatLongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateLatLongResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesLoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTargetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTargetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTargetListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InHouseAppLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emp_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Logic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OTP" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InHouseAppLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InHouseAppLoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagGeo_ReferralAndVisit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emp_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="d_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="geo_lat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="geo_long" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="logic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagGeo_ReferralAndVisitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagGeo_ReferralAndVisitResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

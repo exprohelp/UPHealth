@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f06d4a82-0769-4a91-8e1f-4b54188fdbf6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://115.112.129.141/ExProMobile/ExproMobileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExproMobileService.xsd" MetadataType="Schema" ID="f07d6dac-addf-4d43-8e54-a5a33a1b6c24" SourceId="1" SourceUrl="http://115.112.129.141/ExProMobile/ExproMobileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ExproMobileService.disco" MetadataType="Disco" ID="846673e3-a1ee-4ddc-9bf8-8fa12498ef8e" SourceId="1" SourceUrl="http://115.112.129.141/ExProMobile/ExproMobileService.svc?disco" />
+    <MetadataFile FileName="ExproMobileService1.xsd" MetadataType="Schema" ID="4f1a5560-853a-4fb8-ad94-df38a553f512" SourceId="1" SourceUrl="http://115.112.129.141/ExProMobile/ExproMobileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ExproMobileService.wsdl" MetadataType="Wsdl" ID="d9ab10e7-aec3-453b-8fde-5d3d7dac2d73" SourceId="1" SourceUrl="http://115.112.129.141/ExProMobile/ExproMobileService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

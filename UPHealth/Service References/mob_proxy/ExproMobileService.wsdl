@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExproMobileService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://115.112.129.141/ExProMobile/ExproMobileService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://115.112.129.141/ExProMobile/ExproMobileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExproMobileService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_RegisterMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMember" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_RegisterMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_DiagnosticRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DiagnosticRequest" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_DiagnosticRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DiagnosticRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_HospitalRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:HospitalRequest" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_HospitalRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HospitalRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_PharmacyRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:PharmacyRequest" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_PharmacyRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PharmacyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_SaveNHM_Image_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNHM_Image" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_SaveNHM_Image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveNHM_ImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_EditProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditProfile" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_EditProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetDiagnoticRequestHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnoticRequestHistory" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetDiagnoticRequestHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnoticRequestHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetPharmacyRequestHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPharmacyRequestHistory" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetPharmacyRequestHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPharmacyRequestHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetHospitalRequestHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalRequestHistory" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetHospitalRequestHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalRequestHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_ForgotPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForgotPassword" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_ForgotPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForgotPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetScheduledReferralList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduledReferralList" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetScheduledReferralList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduledReferralListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetSaleByLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleByLogin" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetSaleByLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleByLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_UpdateLatLong_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLatLong" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_UpdateLatLong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLatLongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_SalesLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesLogin" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_SalesLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetTargetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTargetList" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_GetTargetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTargetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_InHouseAppLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:InHouseAppLogin" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_InHouseAppLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InHouseAppLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_TagGeo_ReferralAndVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:TagGeo_ReferralAndVisit" />
+  </wsdl:message>
+  <wsdl:message name="IExproMobileService_TagGeo_ReferralAndVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagGeo_ReferralAndVisitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExproMobileService">
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/AuthenticateUser" message="tns:IExproMobileService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/AuthenticateUserResponse" message="tns:IExproMobileService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/RegisterMember" message="tns:IExproMobileService_RegisterMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/RegisterMemberResponse" message="tns:IExproMobileService_RegisterMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiagnosticRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/DiagnosticRequest" message="tns:IExproMobileService_DiagnosticRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/DiagnosticRequestResponse" message="tns:IExproMobileService_DiagnosticRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HospitalRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/HospitalRequest" message="tns:IExproMobileService_HospitalRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/HospitalRequestResponse" message="tns:IExproMobileService_HospitalRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PharmacyRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/PharmacyRequest" message="tns:IExproMobileService_PharmacyRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/PharmacyRequestResponse" message="tns:IExproMobileService_PharmacyRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveNHM_Image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/SaveNHM_Image" message="tns:IExproMobileService_SaveNHM_Image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/SaveNHM_ImageResponse" message="tns:IExproMobileService_SaveNHM_Image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/EditProfile" message="tns:IExproMobileService_EditProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/EditProfileResponse" message="tns:IExproMobileService_EditProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnoticRequestHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetDiagnoticRequestHistory" message="tns:IExproMobileService_GetDiagnoticRequestHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetDiagnoticRequestHistoryResponse" message="tns:IExproMobileService_GetDiagnoticRequestHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyRequestHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetPharmacyRequestHistory" message="tns:IExproMobileService_GetPharmacyRequestHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetPharmacyRequestHistoryResponse" message="tns:IExproMobileService_GetPharmacyRequestHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalRequestHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetHospitalRequestHistory" message="tns:IExproMobileService_GetHospitalRequestHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetHospitalRequestHistoryResponse" message="tns:IExproMobileService_GetHospitalRequestHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForgotPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/ForgotPassword" message="tns:IExproMobileService_ForgotPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/ForgotPasswordResponse" message="tns:IExproMobileService_ForgotPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetUserDetails" message="tns:IExproMobileService_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetUserDetailsResponse" message="tns:IExproMobileService_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduledReferralList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetScheduledReferralList" message="tns:IExproMobileService_GetScheduledReferralList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetScheduledReferralListResponse" message="tns:IExproMobileService_GetScheduledReferralList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleByLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetSaleByLogin" message="tns:IExproMobileService_GetSaleByLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetSaleByLoginResponse" message="tns:IExproMobileService_GetSaleByLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLatLong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/UpdateLatLong" message="tns:IExproMobileService_UpdateLatLong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/UpdateLatLongResponse" message="tns:IExproMobileService_UpdateLatLong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/SalesLogin" message="tns:IExproMobileService_SalesLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/SalesLoginResponse" message="tns:IExproMobileService_SalesLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTargetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/GetTargetList" message="tns:IExproMobileService_GetTargetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/GetTargetListResponse" message="tns:IExproMobileService_GetTargetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InHouseAppLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/InHouseAppLogin" message="tns:IExproMobileService_InHouseAppLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/InHouseAppLoginResponse" message="tns:IExproMobileService_InHouseAppLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TagGeo_ReferralAndVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExproMobileService/TagGeo_ReferralAndVisit" message="tns:IExproMobileService_TagGeo_ReferralAndVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExproMobileService/TagGeo_ReferralAndVisitResponse" message="tns:IExproMobileService_TagGeo_ReferralAndVisit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExproMobileService" type="tns:IExproMobileService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMember">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/RegisterMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiagnosticRequest">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/DiagnosticRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HospitalRequest">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/HospitalRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PharmacyRequest">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/PharmacyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNHM_Image">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/SaveNHM_Image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditProfile">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/EditProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnoticRequestHistory">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetDiagnoticRequestHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyRequestHistory">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetPharmacyRequestHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalRequestHistory">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetHospitalRequestHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForgotPassword">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/ForgotPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduledReferralList">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetScheduledReferralList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleByLogin">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetSaleByLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLatLong">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/UpdateLatLong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesLogin">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/SalesLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTargetList">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/GetTargetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InHouseAppLogin">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/InHouseAppLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagGeo_ReferralAndVisit">
+      <soap:operation soapAction="http://tempuri.org/IExproMobileService/TagGeo_ReferralAndVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExproMobileService">
+    <wsdl:port name="BasicHttpBinding_IExproMobileService" binding="tns:BasicHttpBinding_IExproMobileService">
+      <soap:address location="http://115.112.129.141/ExProMobile/ExproMobileService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

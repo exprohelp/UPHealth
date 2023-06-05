@@ -1,0 +1,33 @@
+﻿            try
+            {
+                DialogResult res = MessageBox.Show("Do You want to Print", "ExPro Help", MessageBoxButtons.YesNo);
+            }
+            catch (Exception ex)
+            {
+                GlobalUsage.us.SaveErrorLog(GlobalUsage.Unit_id, "eMediShop", ErrorTracker.ErrorHistory(ex));
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+			try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    _ds = GlobalUsage.cws.ReconcileMasterKeyId(out _result, GlobalUsage.Unit_id, e.Item.Text);
+
+
+                }
+             catch (Exception ex) { RadMessageBox.Show(ex.Message, "ExPro Help", MessageBoxButtons.YesNo, RadMessageIcon.Info); }
+				finally{Cursor.Current = Cursors.Default;}
+			
+				  if ((GlobalUsage.OnLine == "ON" && CheckInternet.CheckNet() == "TRUE") || (GlobalUsage.OnLine == "OFF"))
+          
+				  Rectangle rec = Screen.PrimaryScreen.WorkingArea;
+            int size = (rec.Size.Width - this.Width) / 2;
+            this.Location = new System.Drawing.Point(size, 160);
+
+EXEC sp_resetstatus 'yourDBname';
+ALTER DATABASE yourDBname SET EMERGENCY
+DBCC checkdb('yourDBname')
+ALTER DATABASE yourDBname SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+DBCC CheckDB ('yourDBname', REPAIR_ALLOW_DATA_LOSS)
+ALTER DATABASE yourDBname SET MULTI_USER

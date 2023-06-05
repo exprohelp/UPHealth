@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.87.1.13\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.87.1.13\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.87.1.13\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.87.1.13\build\cef.redist.x64.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A9D1311-FC72-40C1-B7E0-F98960AA1209}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UPHealth</RootNamespace>
+    <AssemblyName>UPHealth</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>health.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ALVCS03CONTROLS">
+      <HintPath>..\..\eRadiology\eRadiology\bin\Debug\ALVCS03CONTROLS.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UPHealth_OLD\UPHealth\bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp, Version=87.1.132.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.87.1.132\lib\net452\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=87.1.132.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.87.1.132\lib\net452\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=87.1.132.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.87.1.132\lib\net452\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DiagnosticCrystalLibrary">
+      <HintPath>..\..\eDiagnostic\DiagnosticCrystalLibrary\DiagnosticCrystalLibrary\bin\Debug\DiagnosticCrystalLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.AcroPDFLib">
+      <HintPath>..\..\UPHealth_OLD\UPHealth\bin\Debug\Interop.AcroPDFLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebKitBrowser, Version=0.5.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoUpdater.designer.cs">
+      <DependentUpon>AutoUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckUploadedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckUploadedReport.designer.cs">
+      <DependentUpon>CheckUploadedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BundleScanDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BundleScanDocs.Designer.cs">
+      <DependentUpon>BundleScanDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectMissingDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectMissingDocument.designer.cs">
+      <DependentUpon>CorrectMissingDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filldeletedfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filldeletedfile.Designer.cs">
+      <DependentUpon>Filldeletedfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForm.designer.cs">
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotLinkedUPHealthTat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotLinkedUPHealthTat.Designer.cs">
+      <DependentUpon>NotLinkedUPHealthTat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeendingWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeendingWork.Designer.cs">
+      <DependentUpon>PeendingWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPatientInDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPatientInDocument.Designer.cs">
+      <DependentUpon>SearchPatientInDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ds_uphealth.cs">
+      <DependentUpon>ds_uphealth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ds_uphealth.designer.cs">
+      <DependentUpon>ds_uphealth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ds_uphealth1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_uphealth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\diagProxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Show_scanDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_scanDocument.Designer.cs">
+      <DependentUpon>Show_scanDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentInfoFromRoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentInfoFromRoot.Designer.cs">
+      <DependentUpon>CurrentInfoFromRoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalUsage.cs" />
+    <Compile Include="ImagePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImagePanel.designer.cs">
+      <DependentUpon>ImagePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_form.Designer.cs">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Accounts_Proxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\uph_proxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestList.designer.cs">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UPHealthQuerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPHealthQuerry.designer.cs">
+      <DependentUpon>UPHealthQuerry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UPHealthTat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPHealthTat.Designer.cs">
+      <DependentUpon>UPHealthTat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upload_docs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload_docs.Designer.cs">
+      <DependentUpon>Upload_docs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AutoUpdater.resx">
+      <DependentUpon>AutoUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckUploadedReport.resx">
+      <DependentUpon>CheckUploadedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BundleScanDocs.resx">
+      <DependentUpon>BundleScanDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorrectMissingDocument.resx">
+      <DependentUpon>CorrectMissingDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filldeletedfile.resx">
+      <DependentUpon>Filldeletedfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForm.resx">
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotLinkedUPHealthTat.resx">
+      <DependentUpon>NotLinkedUPHealthTat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeendingWork.resx">
+      <DependentUpon>PeendingWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPatientInDocument.resx">
+      <DependentUpon>SearchPatientInDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_scanDocument.resx">
+      <DependentUpon>Show_scanDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagePanel.resx">
+      <DependentUpon>ImagePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_form.resx">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="CurrentInfoFromRoot.resx">
+      <DependentUpon>CurrentInfoFromRoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestList.resx">
+      <DependentUpon>TestList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPHealthQuerry.resx">
+      <DependentUpon>UPHealthQuerry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPHealthTat.resx">
+      <DependentUpon>UPHealthTat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upload_docs.resx">
+      <DependentUpon>Upload_docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\ds_uphealth.xsc">
+      <DependentUpon>ds_uphealth.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ds_uphealth.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_uphealth1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\ds_uphealth.xss">
+      <DependentUpon>ds_uphealth.xsd</DependentUpon>
+    </None>
+    <None Include="Service References\Accounts_Proxy\Accounts_webservice.wsdl" />
+    <None Include="Service References\diagProxy\Diagnostic_CS_WebService.wsdl" />
+    <None Include="Service References\uph_proxy\UPHealthServices.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\uph_proxy\UPHealthServices.disco" />
+    <None Include="Service References\uph_proxy\configuration91.svcinfo" />
+    <None Include="Service References\uph_proxy\configuration.svcinfo" />
+    <None Include="Service References\uph_proxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="teamdev.licenses" />
+    <Content Include="health.ico" />
+    <None Include="Resources\fwd.png" />
+    <None Include="Resources\Wait.gif" />
+    <None Include="Resources\query_question-64.png" />
+    <None Include="Service References\diagProxy\Diagnostic_CS_WebService.disco" />
+    <None Include="Service References\diagProxy\configuration91.svcinfo" />
+    <None Include="Service References\diagProxy\configuration.svcinfo" />
+    <None Include="Service References\diagProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="XMLFile1.xml" />
+    <None Include="Resources\click16.png" />
+    <None Include="Service References\Accounts_Proxy\Accounts_webservice.disco" />
+    <None Include="Service References\Accounts_Proxy\configuration91.svcinfo" />
+    <None Include="Service References\Accounts_Proxy\configuration.svcinfo" />
+    <None Include="Service References\Accounts_Proxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Save-16.png" />
+    <None Include="Resources\rotate.png" />
+    <None Include="Resources\patient_report.png" />
+    <None Include="Resources\pending-64.png" />
+    <None Include="Resources\download-64.png" />
+    <None Include="Resources\download-32.png" />
+    <None Include="Resources\browse_32.png" />
+    <Content Include="TryCatch.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Accounts_Proxy\" />
+    <WCFMetadataStorage Include="Service References\diagProxy\" />
+    <WCFMetadataStorage Include="Service References\uph_proxy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.87.1.13\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.87.1.13\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.87.1.13\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.87.1.13\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.87.1.132\build\CefSharp.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
